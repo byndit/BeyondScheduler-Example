@@ -35,6 +35,7 @@ The scheduler follows a modular, interface-based architecture that promotes exte
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                    Frontend (Control AddIn)                 │
+│                    JavaScript + HTML + CSS                  │
 └─────────────────────────────────────────────────────────────┘
                               │
                               ▼
@@ -104,6 +105,8 @@ A comprehensive set of interfaces that define the contract for scheduler functio
 - **[`ISchedulerUnscheduledEventFilters`](/Interfaces/ISchedulerUnscheduledEventFilters.Interface.al)**: Unscheduled event filters
   - `GetUnscheduledFilters(var Filters)`
   - `SetSelectedUnscheduledFilter(FilterKey)`
+- **[`ISchedulerTranslations`](/Interfaces/ISchedulerTranslations.Interface.al)**: Translation management
+  - `GetTranslations(var Translations: JsonObject)`
 
 #### Event Handling Interfaces
 - **[`ISchedulerClickEvent`](/Interfaces/ISchedulerClickEvent.Interface.al)**: Event click handling
@@ -120,7 +123,7 @@ A comprehensive set of interfaces that define the contract for scheduler functio
 #### Business Logic Interfaces
 - **[`ISchedulerBusinessTimes`](src/Core/BusinessTimes/ISchedulerBusinessTimes.Interface.al)**: Business hours configuration
   - `OnLoadBusinessTimes(var ShowNonBusinessDaysAndWeekends, var BusinessDayStartsAt, var BusinessDayEndsAt, var BusinessWeekends)`
-- **[`ISchedulerBlockedTimes`](src/Core/BlockedTimes/ISchedulerBlockedTimes.Interface.al)**: Blocked time periods
+- **[`ISchedulerBlockedTimes`](src/Core/BlockedTimes/ISchedulerBlockedTimes.Interface.al)**: Blocked time periods (⚠️ Obsolete - replaced by Special Times)
   - `OnLoadBlockTimes(StartDateTime, EndDateTime, Resources, var SchedulerBlockedTime)`
 - **[`ISchedulerSpecialTimes`](src/Core/SpecialTime/ISchedulerSpecialTimes.Interface.al)**: Special time handling
   - `OnLoadSpecialTimes(StartDateTime, EndDateTime, Resources, var SchedulerSpecialTime)`
@@ -140,6 +143,23 @@ A comprehensive set of interfaces that define the contract for scheduler functio
 #### Copy Event Interface
 - **[`BYD SDL Copy Event`](src/Core/CopyEvent/CopyEvent.Interface.al)**: Event copying functionality
   - `OnEventCopy(EventID, StartDateTime, EndDateTime, ResourceId): SchedulerEvent`
+
+#### Entity and Configuration Interfaces
+- **[`BYD SDL Entity`](src/Core/Entity/Entity.Interface.al)**: Entity behavior definition
+  - `OnLoadEvents(StartingDateTime, EndingDateTime, Resources, var SchedulerEvent)`
+  - `OnEventClicked(EventId)`
+  - `OnEventMove(EventID, StartDateTime, EndDateTime, ResourceId, var SchedulerEvent)`
+  - `OnEventResize(EventID, StartDateTime, EndDateTime, var SchedulerEvent)`
+  - `OnTimeRangeClicked(StartDateTime, EndDateTime, ResourceId, var SchedulerEvent)`
+  - `OnEventCopy(EventID, StartDateTime, EndDateTime, ResourceId, var SchedulerEvent)`
+- **[`BYD SDL Config`](src/Core/Entity/Config.Interface.al)**: Configuration management
+  - `GetEntities(): List of [Enum "BYD SDL Entity"]`
+- **[`BYD SDL Dependency Links`](src/Core/DependencyLinks/DependencyLinks.Interface.al)**: Dependency link management
+  - `OnLoadDependencyLinks()`
+
+#### Legacy Interfaces (Obsolete)
+- **[`BYD SDL IScheduler`](/Interfaces/IScheduler.Interface.al)**: ⚠️ Obsolete (v21.5) - Split into multiple interfaces
+- **[`BYD SDL IUnassignedEventsFilter`](/Interfaces/IUnassignedEventsFilter.Interface.al)**: ⚠️ Obsolete (v21.5) - Split for extensibility
 
 ### 3. Entity System
 The entity system provides a flexible way to handle different types of schedulable objects:
@@ -851,3 +871,67 @@ end;
 ```
 
 This comprehensive guide provides everything needed to implement your own scheduler using the BeyondScheduler framework. The modular architecture allows for extensive customization while maintaining a consistent user experience.
+## Complete Interface Reference
+
+### Interface-to-Procedure Mapping
+
+| Interface | Procedure | Parameters | Return Type | Description |
+|-----------|-----------|------------|-------------|-------------|
+| **BYD SDL IScheduler Core** | `OnInit` | `Scheduler: ControlAddIn` | void | Initialize scheduler |
+| | `OnLoadEvents` | `StartDateTime, EndDateTime, Resources, var SchedulerEvent` | void | Load scheduled events |
+| | `OnLoadResources` | `var SchedulerResource` | void | Load available resources |
+| **BYD SDL IScheduler Filters** | `GetFilters` | `var Filters` | void | Get available filters |
+| | `SetSelectedFilter` | `FilterKey: Text` | void | Set active filter |
+| **BYD SDL IScheduler Unscheduled Events** | `OnLoadUnscheduledEvents` | `var SchedulerEvent` | void | Load unscheduled events |
+| **BYD SDL IScheduler Unscheduled Event Filters** | `GetUnscheduledFilters` | `var Filters` | void | Get unscheduled filters |
+| | `SetSelectedUnscheduledFilter` | `FilterKey: Text` | void | Set unscheduled filter |
+| **BYD SDL IScheduler Translations** | `GetTranslations` | `var Translations: JsonObject` | void | Get UI translations |
+| **BYD SDL IScheduler Click Event** | `OnEventClicked` | `EventId: RecordId` | void | Handle event clicks |
+| **BYD SDL IScheduler Move Event** | `OnEventMove` | `EventID, StartDateTime, EndDateTime, ResourceId` | `SchedulerEvent` | Handle event moves |
+| **BYD SDL IScheduler Resize Event** | `OnEventResize` | `EventID, StartDateTime, EndDateTime` | `SchedulerEvent` | Handle event resizing |
+| **BYD SDL IScheduler Delete Event** | `OnEventDelete` | `EventID: RecordId` | `Boolean` | Handle event deletion |
+| **BYD SDL IScheduler Click TimeRange** | `OnTimeRangeClicked` | `StartDateTime, EndDateTime, ResourceId` | `SchedulerEvent` | Handle time range clicks |
+| **BYD SDL IScheduler Business Times** | `OnLoadBusinessTimes` | `var ShowNonBusinessDaysAndWeekends, var BusinessDayStartsAt, var BusinessDayEndsAt, var BusinessWeekends` | void | Load business hours |
+| **BYD SDL IScheduler Blocked Times** | `OnLoadBlockTimes` | `StartDateTime, EndDateTime, Resources, var SchedulerBlockedTime` | void | Load blocked times (obsolete) |
+| **BYD SDL IScheduler Special Times** | `OnLoadSpecialTimes` | `StartDateTime, EndDateTime, Resources, var SchedulerSpecialTime` | void | Load special times |
+| **BYD SDL IScheduler Special Days** | `OnLoadSpecialDays` | `StartDateTime, EndDateTime, var SchedulerSpecialDay` | void | Load special days |
+| **BYD SDL IScheduler Scale Headers** | `GetScaleHeaders` | `var ScaleConfig` | `JsonArray` | Get custom scale headers |
+| **BYD SDL Context Actions** | `OnLoadContextActions` | `var ContextAction` | void | Load context actions |
+| | `OnContextActionClicked` | `ActionId, EventId, var SchedulerEvent, var ActionToBePerformed` | void | Handle context action clicks |
+| **BYD SDL Time R. Cont. Actions** | `OnLoadTimeRangeContextActions` | `var TimeRangeContextAction` | void | Load time range actions |
+| | `OnTimeRangeContextActionClicked` | `ActionId, StartDateTime, EndDateTime, ResourceId, var SchedulerEvent, var ActionToBePerformed` | void | Handle time range action clicks |
+| **BYD SDL Copy Event** | `OnEventCopy` | `EventID, StartDateTime, EndDateTime, ResourceId` | `SchedulerEvent` | Handle event copying |
+| **BYD SDL Entity** | `OnLoadEvents` | `StartingDateTime, EndingDateTime, Resources, var SchedulerEvent` | void | Load entity events |
+| | `OnEventClicked` | `EventId: RecordId` | void | Handle entity event clicks |
+| | `OnEventMove` | `EventID, StartDateTime, EndDateTime, ResourceId, var SchedulerEvent` | void | Handle entity event moves |
+| | `OnEventResize` | `EventID, StartDateTime, EndDateTime, var SchedulerEvent` | void | Handle entity event resizing |
+| | `OnTimeRangeClicked` | `StartDateTime, EndDateTime, ResourceId, var SchedulerEvent` | void | Handle entity time range clicks |
+| | `OnEventCopy` | `EventID, StartDateTime, EndDateTime, ResourceId, var SchedulerEvent` | void | Handle entity event copying |
+| **BYD SDL Config** | `GetEntities` | none | `List of [Enum "BYD SDL Entity"]` | Get configured entities |
+| **BYD SDL Dependency Links** | `OnLoadDependencyLinks` | none | void | Load dependency links |
+
+### Implementation Priority
+
+#### Essential (Must Implement)
+1. **BYD SDL IScheduler Core** - Required for basic functionality
+2. **BYD SDL IScheduler Unscheduled Events** - For unscheduled events sidebar
+
+#### Recommended (Should Implement)
+3. **BYD SDL IScheduler Move Event** - For drag-and-drop functionality
+4. **BYD SDL IScheduler Resize Event** - For event resizing
+5. **BYD SDL IScheduler Click Event** - For event interaction
+6. **BYD SDL IScheduler Filters** - For filtering capabilities
+
+#### Optional (Nice to Have)
+7. **BYD SDL IScheduler Business Times** - For business hours display
+8. **BYD SDL Context Actions** - For custom event actions
+9. **BYD SDL IScheduler Click TimeRange** - For creating events by clicking empty slots
+10. **BYD SDL Copy Event** - For event duplication
+11. **BYD SDL IScheduler Special Times/Days** - For special time handling
+12. **BYD SDL IScheduler Scale Headers** - For custom time scales
+
+#### Advanced (For Complex Scenarios)
+13. **BYD SDL Entity** - For multi-entity support
+14. **BYD SDL Config** - For entity configuration
+15. **BYD SDL Time R. Cont. Actions** - For time range context menus
+16. **BYD SDL Dependency Links** - For event relationships
