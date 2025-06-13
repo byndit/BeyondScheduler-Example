@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="de-DE"
+    original="BYD Employee Scheduler 4 Business Central">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 449030708 - Property 2879900210" size-unit="char" translate="yes"
+          xml:space="preserve">
+          <source>Employee Planning</source>
+          <target>Personaleinsatzplanung</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BIT Employee Planning - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 449030708 - NamedType 3621259247" size-unit="char" translate="yes"
+          xml:space="preserve">
+          <source>You cannot plan because the employee is blocked due to privacy.</source>
+          <target>Sie können nicht planen, da der Mitarbeiter aufgrund des Datenschutzes blockiert ist.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BIT Employee Planning - NamedType BlockedErr</note>
+        </trans-unit>
+        <trans-unit id="Table 449030708 - Field 2265496984 - Property 2879900210" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Afternoon</source>
+          <target>Nachmittag</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BIT Employee Planning - Field Afternoon - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 449030708 - Field 2790486453 - Property 2879900210" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Comment</source>
+          <target>Bemerkung</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BIT Employee Planning - Field Comment - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 449030708 - Field 1171137197 - Property 2879900210" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Customer Name</source>
+          <target>Debitorenname</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BIT Employee Planning - Field Customer Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 449030708 - Field 4190130733 - Property 2879900210" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Customer No.</source>
+          <target>Debitorennr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BIT Employee Planning - Field Customer No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 449030708 - Field 3461834954 - Property 2879900210" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target>Beschreibung</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BIT Employee Planning - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 449030708 - Field 541292345 - Property 2879900210" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>First Name</source>
+          <target>Vorname</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BIT Employee Planning - Field Employee First Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 449030708 - Field 529193961 - Property 2879900210" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Last Name</source>
+          <target>Nachname</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BIT Employee Planning - Field Employee Last Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 449030708 - Field 1964419135 - Property 2879900210" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Employee No.</source>
+          <target>Mitarbeiternr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BIT Employee Planning - Field Employee No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 449030708 - Field 883711285 - Property 2879900210" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <target>Lfd. Nr.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BIT Employee Planning - Field Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 449030708 - Field 2110632758 - Property 2879900210" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>From Date</source>
+          <target>Von Datum</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BIT Employee Planning - Field From Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 449030708 - Field 806193894 - Property 2879900210" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Qty. per Unit of Measure</source>
+          <target>Menge pro Einheit</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BIT Employee Planning - Field Qty. per Unit of Measure - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 449030708 - Field 2704404533 - Property 2879900210" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <target>Menge</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BIT Employee Planning - Field Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 449030708 - Field 3179217921 - Property 2879900210" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Quantity (Base)</source>
+          <target>Menge (Basis)</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BIT Employee Planning - Field Quantity (Base) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 449030708 - Field 2565971985 - Property 2879900210" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>To Date</source>
+          <target>Bis Datum</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BIT Employee Planning - Field To Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 449030708 - Field 2385270358 - Property 2879900210" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Unit of Measure Code</source>
+          <target>Einheitencode</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BIT Employee Planning - Field Unit of Measure Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 537491233 - NamedType 394036889" size-unit="char" translate="yes"
+          xml:space="preserve">
+          <source>Absence</source>
+          <target>Fehlzeit</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BIT Empl. Planning Scheduler - NamedType AbsenceLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 537491233 - NamedType 1730101802" size-unit="char" translate="yes"
+          xml:space="preserve">
+          <source>You are not allowed to schedule this resource.</source>
+          <target>Sie dürfen diese Ressource nicht planen.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BIT Empl. Planning Scheduler - NamedType CannotScheduleLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 1616642112 - Property 2879900210" size-unit="char" translate="yes"
+          xml:space="preserve">
+          <source>Employee Planning Card</source>
+          <target>Personaleinsatzplanungskarte</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Employee Planning Card - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1616642112 - Property 3863440606" size-unit="char" translate="yes"
+          xml:space="preserve">
+          <source>employee planning calendar outlook</source>
+          <target>Personaleinsatzplanung Kalender Outlook</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Employee Planning Card - Property AdditionalSearchTerms</note>
+        </trans-unit>
+        <trans-unit id="Page 1616642112 - Control 3627198907 - Property 2879900210" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Forecast</source>
+          <target>Planung</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Employee Planning Card - Control BIT Forecast Factbox - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1616642112 - Control 2790486453 - Property 1295455071" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Specifies if a comment is associated with this entry.</source>
+          <target>Gibt an, ob eine Bemerkung diesem Posten zugeordnet ist.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Employee Planning Card - Control Comment - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1616642112 - Control 4190130733 - Property 1295455071" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Customer No. field.</source>
+          <target>Gibt den Wert des Felds Debitorennr. an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Employee Planning Card - Control Customer No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1616642112 - Control 3461834954 - Property 1295455071" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Specifies a description of the absence.</source>
+          <target>Gibt eine Beschreibung der Abwesenheit an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Employee Planning Card - Control Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1616642112 - Control 1964419135 - Property 1295455071" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Specifies a number for the employee.</source>
+          <target>Gibt eine Nummer für den Mitarbeiter an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Employee Planning Card - Control Employee No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1616642112 - Control 2110632758 - Property 1295455071" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Specifies the first day of the employee's absence registered on this line.</source>
+          <target>Gibt den ersten Tag der in dieser Zeile registrierten Abwesenheit des Mitarbeiters an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Employee Planning Card - Control From Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1616642112 - Control 2704404533 - Property 1295455071" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Specifies the quantity associated with absences, in hours or days.</source>
+          <target>Gibt die Abwesenheiten zugeordnete Menge in Stunden oder Tagen an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Employee Planning Card - Control Quantity - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1616642112 - Control 2565971985 - Property 1295455071" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Specifies the last day of the employee's absence registered on this line.</source>
+          <target>Gibt den letzten Tag der in dieser Zeile registrierten Abwesenheit des Mitarbeiters an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Employee Planning Card - Control To Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2001802566 - Property 2879900210" size-unit="char" translate="yes"
+          xml:space="preserve">
+          <source>Employee Planning List</source>
+          <target>Personaleinsatzplanungsliste</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Employee Planning List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2001802566 - Control 2265496984 - Property 1295455071" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Afternoon field.</source>
+          <target>Gibt den Wert des Felds Nachmittag an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Employee Planning List - Control Afternoon - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2001802566 - Control 2790486453 - Property 1295455071" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Specifies if a comment is associated with this entry.</source>
+          <target>Gibt an, ob eine Bemerkung diesem Posten zugeordnet ist.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Employee Planning List - Control Comment - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2001802566 - Control 4190130733 - Property 1295455071" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Customer No. field.</source>
+          <target>Gibt den Wert des Felds Debitorennr. an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Employee Planning List - Control Customer No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2001802566 - Control 3461834954 - Property 1295455071" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Specifies a description of the absence.</source>
+          <target>Gibt eine Beschreibung der Abwesenheit an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Employee Planning List - Control Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2001802566 - Control 1964419135 - Property 1295455071" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Specifies a number for the employee.</source>
+          <target>Gibt eine Nummer für den Mitarbeiter an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Employee Planning List - Control Employee No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2001802566 - Control 883711285 - Property 1295455071" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Entry No. field.</source>
+          <target>Gibt den Wert des Felds Lfd. Nr. an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Employee Planning List - Control Entry No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2001802566 - Control 2110632758 - Property 1295455071" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Specifies the first day of the employee's absence registered on this line.</source>
+          <target>Gibt den ersten Tag der in dieser Zeile registrierten Abwesenheit des Mitarbeiters an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Employee Planning List - Control From Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2001802566 - Control 2704404533 - Property 1295455071" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Specifies the quantity associated with absences, in hours or days.</source>
+          <target>Gibt die Abwesenheiten zugeordnete Menge in Stunden oder Tagen an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Employee Planning List - Control Quantity - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2001802566 - Control 2565971985 - Property 1295455071" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Specifies the last day of the employee's absence registered on this line.</source>
+          <target>Gibt den letzten Tag der in dieser Zeile registrierten Abwesenheit des Mitarbeiters an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Employee Planning List - Control To Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2001802566 - Control 3627198907 - Property 2879900210" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Forecast</source>
+          <target>Planung</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Employee Planning List - Control BIT Forecast Factbox - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3627198907 - Property 2879900210" size-unit="char" translate="yes"
+          xml:space="preserve">
+          <source>Forecast</source>
+          <target>Planung</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Forecast Factbox - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3627198907 - Method 1672340052 - NamedType 2180186744" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>%1: %2 to %3</source>
+          <target>%1: %2 bis %3</target>
+          <note from="Developer" annotates="general" priority="2">%1 period type, %2 from, %3 to</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Forecast Factbox - Method GetCaption - NamedType CaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 3627198907 - Control 2445482498 - Property 2879900210" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>General</source>
+          <target>Allgemein</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Forecast Factbox - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3627198907 - Control 541292345 - Property 1295455071" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Employee First Name field.</source>
+          <target>Gibt den Wert des Felds Vorname des Mitarbeiters an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Forecast Factbox - Control Employee First Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3627198907 - Control 529193961 - Property 1295455071" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Employee Last Name field.</source>
+          <target>Gibt den Wert des Felds Nachname des Mitarbeiters an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Forecast Factbox - Control Employee Last Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3627198907 - Control 1964419135 - Property 1295455071" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Specifies a number for the employee.</source>
+          <target>Gibt eine Nummer für den Mitarbeiter an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Forecast Factbox - Control Employee No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3627198907 - Control 957872088 - Property 2879900210" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Capacity:Planned</source>
+          <target>Kapazität:Geplant</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Forecast Factbox - Control Planned - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3627198907 - Control 410807254 - Property 1295455071" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Capacity Month field.</source>
+          <target>Gibt den Wert des Felds Kapazität Monat an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Forecast Factbox - Control GetCapacityMonth - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3627198907 - Control 713343850 - Property 1295455071" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Capacity Quarter field.</source>
+          <target>Gibt den Wert des Felds Kapazität Quartal an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Forecast Factbox - Control GetCapacityQuarter - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3627198907 - Control 1730125290 - Property 1295455071" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Capacity Week field.</source>
+          <target>Gibt den Wert des Felds Kapazität Woche an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Forecast Factbox - Control GetCapacityWeek - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3627198907 - Control 3736377183 - Property 1295455071" size-unit="char"
+          translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Capacity Year field.</source>
+          <target>Gibt den Wert des Felds Kapazität Jahr an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BIT Forecast Factbox - Control GetCapacityYear - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 537491233 - Property 2879900210" size-unit="char" translate="yes"
+          xml:space="preserve">
+          <source>Employee Planning Scheduler</source>
+          <target>Personaleinsatzplanung Scheduler</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BIT Empl. Planning Scheduler - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1011005545 - Control 1256899004 - Property 2879900210"
+          size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
+          <source>Scheduler</source>
+          <target>BeyondScheduler</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BIT Customer Card - Control BIT Scheduler - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1011005545 - Control 2678378657 - Property 1295455071"
+          size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
+          <source>Specifies the value of the Hex Color field.</source>
+          <target>Gibt den Wert des Felds Hex Farbe an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BIT Customer Card - Control BIT Hex Color - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1011005545 - Control 3846570866 - Property 1295455071"
+          size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
+          <source>Specifies the value of the Schedule to Planning Board field.</source>
+          <target>Gibt den Wert des Felds Planungstafel planen an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BIT Customer Card - Control BIT Schedule to Planning Board - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2112330085 - Field 2678378657 - Property 2879900210"
+          size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
+          <source>Hex Color</source>
+          <target>Hex Farbe</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BIT Customer - Field BIT Hex Color - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2112330085 - Field 3846570866 - Property 2879900210"
+          size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
+          <source>Schedule to Planning Board</source>
+          <target>In der Personaleinsatzplanung </target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BIT Customer - Field BIT Schedule to Planning Board - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

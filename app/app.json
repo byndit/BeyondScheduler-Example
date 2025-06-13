@@ -1,0 +1,36 @@
+{
+  "id": "76d5e7f6-a494-4250-a90f-cdda271a4d40",
+  "name": "Employee Planning with BeyondScheduler",
+  "publisher": "BEYONDIT GmbH",
+  "version": "2025.5.0.0",
+  "brief": "Scheduling Absence Extension.",
+  "description": "Visit https://www.beyondit.gmbh/",
+  "url": "https://beyond365.de",
+  "supportedLocales": [
+    "de-DE",
+    "en-US"
+  ],
+  "propagateDependencies": true,
+  "dependencies": [
+    {
+      "id": "45a91b92-ea75-4473-92b0-5fb545c8295f",
+      "name": "BeyondScheduler",
+      "publisher": "BEYONDIT GmbH",
+      "version": "1.0.0.0"
+    }
+  ],
+  "application": "25.0.0.0",
+  "platform": "25.0.0.0",
+  "idRanges": [
+    {
+      "from": 50321,
+      "to": 50340
+    }
+  ],
+  "runtime": "14.0",
+  "features": [
+    "TranslationFile",
+    "NoImplicitWith"
+  ],
+  "target": "Cloud"
+}
