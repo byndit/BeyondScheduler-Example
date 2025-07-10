@@ -35,7 +35,7 @@ The scheduler follows a modular, interface-based architecture that promotes exte
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                    Frontend (Control AddIn)                 │
-│                    JavaScript + HTML + CSS                  │
+│                                                             │
 └─────────────────────────────────────────────────────────────┘
                               │
                               ▼
@@ -172,36 +172,65 @@ The entity system provides a flexible way to handle different types of schedulab
 
 ### Step 1: Set Up the Basic Structure
 
-1. **Create the Scheduler Page**
-   ```al
-   page 50000 "My Scheduler"
-   {
-       PageType = Card;
-       ApplicationArea = All;
-       
-       layout
-       {
-           area(Content)
-           {
-               usercontrol(Scheduler; "BYD SDL Scheduler")
-               {
-                   ApplicationArea = All;
-                   // Add all required triggers
-               }
-           }
-       }
-   }
-   ```
+1. **Create a Report where you implement your custom interfaces and run the Schedulder Page**
+```al
+report 50000 "Absence Scheduler"
+{
+    Caption = 'Absence Scheduler';
+    UsageCategory = Tasks;
+    ApplicationArea = All;
+    ProcessingOnly = True;
+    UseRequestPage = false;
 
-2. **Implement Core Interface**
+
+
+    trigger OnInitReport()
+    var
+        AbsenceScheduler: Codeunit "My Scheduler Implementation";
+        Unscheduled: Codeunit "BIT Unscheduled Tasks";
+        BusinessTimes: Codeunit "BIT Business Times";
+        SpecialTimes: Codeunit "BYD SDL SP. Ti. From Base Cal.";
+        SpecialDays: Codeunit "BYD SDL Sp. Day From Base Cal.";
+        ScaleHeaders: Codeunit "BYD SDL Scale Headers";
+        SchedulerPage: Page "BYD SDL Scheduler";
+    begin
+        SchedulerPage.SetInterfaceCore(AbsenceScheduler);
+
+        SchedulerPage.SetInterfaceFilters(AbsenceScheduler);
+
+        SchedulerPage.SetInterfaceScaleHeaders(ScaleHeaders);
+
+        SchedulerPage.SetInterfaceClickEvent(AbsenceScheduler);
+
+        SchedulerPage.SetInterfaceClickTimeRange(AbsenceScheduler);
+
+        SchedulerPage.SetInterfaceResizeEvent(AbsenceScheduler);
+
+        SchedulerPage.SetInterfaceMoveEvent(AbsenceScheduler);
+
+        SchedulerPage.SetInterfaceResizeEvent(AbsenceScheduler);
+
+        SchedulerPage.SetInterfaceDeleteEvent(AbsenceScheduler);
+
+        SchedulerPage.SetInterfaceUnscheduledEvents(AbsenceScheduler);
+
+        SchedulerPage.SetInterfaceUnscheduledEventFilters(Unscheduled);
+
+        SchedulerPage.SetInterfaceSpecialTimes(SpecialTimes);
+
+        SchedulerPage.SetInterfaceSpecialDay(SpecialDays);
+
+        SchedulerPage.SetInterfaceBusinessTimes(BusinessTimes);
+
+        SchedulerPage.Run();
+    end;
+}
+```
+
+3. **Implement Core Interface**
    ```al
    codeunit 50000 "My Scheduler Implementation" implements "BYD SDL IScheduler Core"
-   {
-       procedure OnInit(Scheduler: ControlAddIn "BYD SDL Scheduler")
-       begin
-           // Initialize your scheduler
-       end;
-       
+   {     
        procedure OnLoadEvents(StartDateTime: DateTime; EndDateTime: DateTime; Resources: List of [RecordId]; var SchedulerEvent: Record "BYD SDL Scheduler Event")
        begin
            // Load your events into the SchedulerEvent temporary table
@@ -216,14 +245,14 @@ The entity system provides a flexible way to handle different types of schedulab
 
 ### Step 2: Configure the Scheduler Page
 
-In your scheduler page, set up the interface implementations:
+In your scheduler report, set up the interface implementations:
 
 ```al
 trigger OnOpenPage()
 var
     MyImplementation: Codeunit "My Scheduler Implementation";
 begin
-    CurrPage.Scheduler.SetInterfaceCore(MyImplementation);
+    SchedulerPage.SetInterfaceCore(MyImplementation);
     // Set other interfaces as needed
 end;
 ```
@@ -473,64 +502,6 @@ table 50000 "My Filter Setup"
 ```
 
 ## Frontend Integration
-
-### Control AddIn Structure
-The scheduler uses a JavaScript-based control add-in with the following structure:
-
-```
-/Scheduler.ControlAddIn.al
-├── index.html                 // Main HTML structure
-├── css/
-│   └── scheduler.css          // Styling
-└── js/
-    ├── main.js               // Core scheduler logic
-    ├── events.js             // Event handling
-    └── utils.js              // Utility functions
-```
-
-### Key JavaScript Methods
-```javascript
-// Initialize the scheduler
-Microsoft.Dynamics.NAV.InvokeExtensibilityMethod('OnControlReady', [controlId]);
-
-// Load events for date range
-Microsoft.Dynamics.NAV.InvokeExtensibilityMethod('OnLoadEvents', [
-    controlId, 
-    startDateTime, 
-    endDateTime, 
-    resourcesArray,
-    selectedFilter
-]);
-
-// Handle event operations
-Microsoft.Dynamics.NAV.InvokeExtensibilityMethod('OnEventMove', [
-    controlId,
-    eventId,
-    newStartDateTime,
-    newEndDateTime,
-    newResourceId
-]);
-```
-
-## Configuration
-
-### Core Setup
-Configure the scheduler through the Core Setup table:
-
-```al
-table 70838691 "BYD SDL Core Setup"
-{
-    fields
-    {
-        field(1; "Primary Key"; Code[10]) { }
-        field(10; "Entity for Time Range Click"; Enum "BYD SDL Entity") { }
-        field(20; "Show Dependency Links"; Boolean) { }
-        field(30; "BYD SDL Table No. Line 1"; Integer) { }   // Custom field mapping
-        field(31; "BYD SDL Field No. Line 1"; Integer) { }
-        // Additional field mappings...
-    }
-}
-```
 
 ### Business Times Configuration
 **Interface**: `"BYD SDL IScheduler Business Times"`
